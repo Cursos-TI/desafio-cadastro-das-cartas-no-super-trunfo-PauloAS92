@@ -44,7 +44,7 @@ int main() {
     printf("Nome da cidade: %s\n", nome1);
     printf("População: %d Habitantes\n", populacao1);
     printf("Área: %d km²\n", area1);
-    printf("PIB: %.2f bilhões de reais\n", pib1); //imprime o pib em bilhões de reais com 2 casas decimais
+    printf("PIB: R$ %.2f bilhões\n", pib1); //imprime o pib em bilhões de reais com 2 casas decimais
     printf("Pontos Turíticos: %d\n", num_pts_tur1);
     
     printf("\nCadastre uma nova carta:\n\n");//pula uma linha antes e depois e entra com os dados da segunda carta
@@ -79,7 +79,7 @@ int main() {
     printf("Nome da cidade: %s\n", nome2);
     printf("População: %d Habitantes\n", populacao2);
     printf("Área: %d km²\n", area2);
-    printf("PIB: %.2f bilhões de reais\n", pib2); //imprime o pib em bilhões de reais com 2 casas decimais
+    printf("PIB: R$ %.2f bilhões\n", pib2); //imprime o pib em bilhões de reais com 2 casas decimais
     printf("Pontos Turíticos: %d\n", num_pts_tur2);
 
     printf("\nCartas cadastradas com sucesso!\n");
