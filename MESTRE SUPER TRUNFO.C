@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-//AVENTUREIRO SUPER TRUNFO
+//MESTRE SUPER TRUNFO
 
 int main() {
     char nome1[50];//cria a variavel nome da cidade da carta 1
