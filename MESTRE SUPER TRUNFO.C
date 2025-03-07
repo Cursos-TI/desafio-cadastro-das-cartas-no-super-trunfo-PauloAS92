@@ -62,7 +62,7 @@ int main() {
     printf("PIB per Capita: %.2f reais\n", pib_per);//imprime o pib per capita da cidade
     
     //Calculando super poder
-    superpoder1 = (float)populacao1 + (float)area1 + (float)pib1 + (float)num_pts_tur1 + pib_per + (float)1/densidade_pop;
+    superpoder1 = (float)populacao1 + (float)area1 + pib1 + (float)num_pts_tur1 + pib_per + (float)1/densidade_pop;
     printf("super poder: %.2f\n", superpoder1);
     
     printf("\nCadastre uma nova carta:\n\n");//pula uma linha antes e depois e entra com os dados da segunda carta
@@ -74,7 +74,7 @@ int main() {
     scanf(" %s", cod_carta2);//usuário entra com o codigo da carta
 
     printf("Digite o nome da cidade:\n");
-    scanf(" %[^\n]", nome2);
+    scanf(" %[^\n]", nome2);// Lê todos os caracteres até que o usuário pressione enter. Caso o nome da cidade seja composto não haverá erros.
     
     printf("Digite o número de habitantes da cidade:\n");
     scanf(" %lu", &populacao2);//usuário entra com o numero de habitantes da cidade
@@ -106,7 +106,7 @@ int main() {
     printf("PIB Per Capita: %.2f reais\n", pib_per2);//imprime o pib per capita da cidade
 
      //Calculando super poder
-     superpoder2 = (float)populacao2 + (float)area2 + (float)pib2 + (float)num_pts_tur2 + pib_per2 + (1/densidade_pop2);
+     superpoder2 = (float)populacao2 + (float)area2 + pib2 + (float)num_pts_tur2 + pib_per2 + (1/densidade_pop2);
      printf("Super poder: %.2f", superpoder2);
 
     printf("\nCartas cadastradas com sucesso!\n");
