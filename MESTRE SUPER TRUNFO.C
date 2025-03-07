@@ -1,8 +1,9 @@
 #include <stdio.h>
 
-//MESTRE SUPER TRUNFO
+
 
 int main() {
+    printf("SUPER TRUNFO");
     char nome1[50];//cria a variavel nome da cidade da carta 1
     char nome2[50];//cria a variavel nome da cidade da carta 2
     char cod_carta1[5];//cria a variável, codigo da carta 1
