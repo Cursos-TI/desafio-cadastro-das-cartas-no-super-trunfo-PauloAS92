@@ -1,9 +1,7 @@
 #include <stdio.h>
-
-
+//DESAFIO MESTRE SUPER TRUNFO
 
 int main() {
-    printf("SUPER TRUNFO");
     char nome1[50];//cria a variavel nome da cidade da carta 1
     char nome2[50];//cria a variavel nome da cidade da carta 2
     char cod_carta1[5];//cria a variável, codigo da carta 1
@@ -118,8 +116,8 @@ int main() {
     int carta1_venceu;
     int carta2_venceu;
 
-    char *vitoria1[]={"", "Carta 1 venceu (1)"}; //Declara uma array de stings para ser usada como informação que a primeira carta venceu,...
-    char *vitoria2[]={"","Carta 2 venceu(1)"};//...Caso a carta perca, ela retorna uma strng vazia.
+    const char *vitoria1[]={"", "Carta 1 venceu (1)"}; //Declara uma array de stings para ser usada como informação que a primeira carta venceu,...
+    const char *vitoria2[]={"","Carta 2 venceu(1)"};//...Caso a carta perca, ela retorna uma strng vazia.
 
     printf("\nMaior população: ");
     carta1_venceu = populacao1 > populacao2;//compara e retona 1 ou 0
