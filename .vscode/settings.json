@@ -60,6 +60,7 @@
   "C_Cpp_Runner.useLinkTimeOptimization": false,
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
   "files.associations": {
-    "MESTRE SUPER TRUNFO.C": "cpp"
+    "MESTRE SUPER TRUNFO.C": "cpp",
+    "SUPER TRUNFO MESTRE.C": "cpp"
   }
 }

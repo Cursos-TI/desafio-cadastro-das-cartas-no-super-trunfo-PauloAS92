@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/workspaces/desafio-cadastro-das-cartas-no-super-trunfo-PauloAS92/TREINO",
-      "program": "/workspaces/desafio-cadastro-das-cartas-no-super-trunfo-PauloAS92/TREINO/build/Debug/outDebug",
+      "cwd": "/workspaces/desafio-cadastro-das-cartas-no-super-trunfo-PauloAS92/TEMA 2",
+      "program": "/workspaces/desafio-cadastro-das-cartas-no-super-trunfo-PauloAS92/TEMA 2/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
