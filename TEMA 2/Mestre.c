@@ -117,7 +117,7 @@ int main(){
     scanf("  %d", &escolha);
 
     printf("\n\nEscolha novamente um atributo para comparação\n");
-    //IMPRIME AS OPÇÕES QUE NÃO FORAM SELECIONADAS
+    //OS IF ABAIXO IMPRIME AS OPÇÕES QUE NÃO FORAM SELECIONADAS
 
     if (escolha != 1)
     {printf("1 - População;\n");}
@@ -151,7 +151,6 @@ int main(){
         soma1 = populacao1; soma2 = populacao2;//SOMA PARA COMPARAÇÃO FINAL
         printf("%s tem %lu habitantes.\n", nome1, populacao1);
         printf("%s tem %lu habitantes.\n", nome2, populacao2);
-        printf("pontuação resultado %d e r2 %d\n", resultado1, resultado2);
         break;
 
     case 2:
@@ -227,7 +226,7 @@ int main(){
             soma1 += area1; soma2 += area2;
             printf("%s tem %d km²\n", nome1, area1);
             printf("%s tem %d km²\n", nome2, area2);
-            printf("pontuação resultado %d e r2 %d", resultado1, resultado2);
+           
             break;
         case 3:
             printf("O segundo atributo escolhido foi PIB;\n");
@@ -275,7 +274,7 @@ int main(){
     if (resultado1 > resultado2)
         {printf("A Carta %s, %s venceu por %d ponto(s) a %d\n", cod_carta1, nome1, resultado1, resultado2);
         }else if (resultado1 == resultado2)
-        {printf("Houve empate, os atributos escolhidos tem o memso valor\n");
+        {printf("Houve empate, cada carta recebeu %d pontos.\n", resultado1);
         }else{printf("A Carta %s, %s venceu por %d ponto(s) a %d\n", cod_carta2, nome2, resultado2, resultado1);}
     
     printf("\nPara a soma dos atributos:\n");
