@@ -43,7 +43,7 @@ int main(){
     printf("Digite o numero de pontos turísticos da cidade:\n");
     scanf(" %d", &num_pts_tur1); //usuário entra com o numero de pontos turísticos
 
-    densidade_pop = (float)populacao1/area1;// calcula a densidade para a primeira carta
+    densidade_pop = (float)populacao1/(float)area1;// calcula a densidade para a primeira carta
     pib_per = (float)pib1/populacao1;// calcula o Pib per capita em bilhoes de reais para primeira carta
     pib_per *= 1000000000;//define o valor do pib per capita em reais por habitante
 
@@ -143,20 +143,22 @@ int main(){
     if (escolha != escolha2)//EVITA DE CONTINUAR SE O USUÁRIO DIGITAR UM VALOR IGUAL NAS DUAS OPÇÕES 
     {switch (escolha) //ESSE SWITCH VERIFICA QUEM VENCEU OU SE HOUVE EMPATE NA COMPARAÇÃO DO PRIMEIRO ATRIBUTO ESCOLHIDO
     {case 1:
-        printf("\nO primeiro atributo escolhido foi População;\n");
+        printf("\n\nO primeiro atributo escolhido foi População;\n");
         if (populacao1 != populacao2)
-        {(populacao1 > populacao2) ? resultado1 = 1 : resultado2 = 1;
-        } else {resultado1 = 1; resultado2 =1;}
-        soma1 = populacao1; soma2 = populacao2;
+        {resultado1 = (populacao1 > populacao2) ? 1 : 0;//SE CARTA 1 > CARTA 2 RESULTADO 2 RECEBE 1
+        resultado2 = (populacao1 > populacao2) ? 0 : 1;//SE CARTA 1 < CARTA 2 RESULTADO 2 RECEBE 1
+       } else {resultado1 = 1; resultado2 =1;}//CASO DE EMPATE CADA CARTA RECEBE 1
+        soma1 = populacao1; soma2 = populacao2;//SOMA PARA COMPARAÇÃO FINAL
         printf("%s tem %lu habitantes.\n", nome1, populacao1);
         printf("%s tem %lu habitantes.\n", nome2, populacao2);
-
+        printf("pontuação resultado %d e r2 %d\n", resultado1, resultado2);
         break;
 
     case 2:
         printf("O primeiro atributo escolhido foi Área;\n");
         if (area1 != area2)
-         {(area1 > area2) ? resultado1 = 1 : resultado2 = 1;
+         {resultado1 = (area1 > area2) ? 1 : 0;
+            resultado2 = (area1 > area2) ? 0 : 1;
         } else {resultado1 = 1; resultado2 =1;}
         soma1 = area1; soma2 = area2;
         printf("%s tem %d km²\n", nome1, area1);
@@ -165,7 +167,8 @@ int main(){
     case 3:
         printf("O primeiro atributo escolhido foi PIB;\n");
         if (pib1 != pib2)
-         {(pib1 > pib2) ? resultado1 = 1 : resultado2 = 1;
+         {resultado1 = (pib1 > pib2) ? 1 : 0;
+            resultado2 = (pib1 > pib2) ? 0 : 1;            
          } else {resultado1 = 1; resultado2 =1;}
          soma1 = pib1; soma2 = pib2;
         printf("%s tem um PIB de R$ %.2f\n", nome1, pib1);
@@ -174,7 +177,8 @@ int main(){
     case 4:
         printf("O primeiro atributo escolhido foi PIB Per Capita;\n");
         if (pib_per != pib_per2)
-         { (pib_per > pib_per2) ? resultado1 = 1 : resultado2 = 1;
+         { resultado1 = (pib_per > pib_per2) ? 1 : 0;
+            resultado2 = (pib_per > pib_per2) ? 0 : 1;            
          } else {resultado1 = 1; resultado2 =1;}
          soma1 = pib_per; soma2 = pib_per2;
          printf("%s tem um PIB Per Capita de R$ %.2f\n", nome1, pib_per);
@@ -183,7 +187,8 @@ int main(){
     case 5:
         printf("O primeiro atributo escolhido foi Densidade Populacional;\n");
         if (densidade_pop != densidade_pop2)
-        {(densidade_pop < densidade_pop2) ? resultado1 = 1 : resultado2 = 1;
+        {resultado1 = (densidade_pop < densidade_pop2) ? 1 : 0;
+            resultado2 = (densidade_pop < densidade_pop2) ? 0 : 1;            
         } else {resultado1 = 1; resultado2 = 1;}
         soma1 = (float)1/densidade_pop; soma2 = (float)1/densidade_pop2;
         printf("%s tem um Densidade de %.2f km²/hab\n", nome1, densidade_pop);
@@ -192,7 +197,8 @@ int main(){
     case 6:
         printf("O primeiro atributo escolhido foi Numero de Pontos Turisticos;\n");
         if (num_pts_tur1 != num_pts_tur2)
-        {(num_pts_tur1 > num_pts_tur2) ? resultado1 = 1 : resultado2 = 1;
+        {resultado1 = (num_pts_tur1 > num_pts_tur2) ? 1 : 0;
+            resultado2 = (num_pts_tur1 > num_pts_tur2) ? 0 : 1;            
         } else {resultado1 = 1; resultado2 = 1;}
         soma1 = num_pts_tur1; soma2 = num_pts_tur2;
         printf("%s tem %d pontos turísticos\n", nome1, num_pts_tur1);
@@ -221,7 +227,7 @@ int main(){
             soma1 += area1; soma2 += area2;
             printf("%s tem %d km²\n", nome1, area1);
             printf("%s tem %d km²\n", nome2, area2);
-
+            printf("pontuação resultado %d e r2 %d", resultado1, resultado2);
             break;
         case 3:
             printf("O segundo atributo escolhido foi PIB;\n");
@@ -253,7 +259,7 @@ int main(){
         case 6:
             printf("O segundo atributo escolhido foi Numero de Pontos Turisticos;\n");
             if (num_pts_tur1 != num_pts_tur2)
-            {(num_pts_tur1 > num_pts_tur2) ? resultado1 = 1 : resultado2 = 1;
+            {(num_pts_tur1 > num_pts_tur2) ? resultado1++ : resultado2++;
             } else {resultado1 = 1; resultado2 =1;}
             soma1 += num_pts_tur1; soma2 += num_pts_tur2;
             printf("%s tem %d pontos turísticos\n", nome1, num_pts_tur1);
@@ -278,7 +284,6 @@ int main(){
         }else if (soma1 == soma2) {printf("EMPATOU\n");}
         else{printf("A carta %s, %s venceu! a soma dos seus atributos foram %.2f contra %.2f da outra carta.\n", cod_carta2, nome2, soma2, soma1);} 
     }else{printf("Você selecionou o mesmo atributo reinicie o jogo e tente novamente.\n");}
-
 
     return 0;
 
