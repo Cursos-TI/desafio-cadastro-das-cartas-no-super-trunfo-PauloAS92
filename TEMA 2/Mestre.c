@@ -17,8 +17,8 @@ int main(){
     float pib_per;
     float densidade_pop2;
     float pib_per2;
-    float superpoder1;
-    float superpoder2;
+    //float superpoder1;
+   // float superpoder2;
 
     printf("Desafio SUPER TRUNFO:\n");
     
@@ -62,8 +62,8 @@ int main(){
     printf("PIB per Capita: %.2f reais\n", pib_per);//imprime o pib per capita da cidade
     
     //Calculando super poder
-    superpoder1 = (float)populacao1 + (float)area1 + pib1 + (float)num_pts_tur1 + pib_per + (float)1/densidade_pop;
-    printf("super poder: %.2f\n", superpoder1);
+    //superpoder1 = (float)populacao1 + (float)area1 + pib1 + (float)num_pts_tur1 + pib_per + (float)1/densidade_pop;
+    //printf("super poder: %.2f\n", superpoder1);
     
     printf("\nCadastre uma nova carta:\n\n");//pula uma linha antes e depois e entra com os dados da segunda carta
     
@@ -106,8 +106,8 @@ int main(){
     printf("PIB Per Capita: %.2f reais\n", pib_per2);//imprime o pib per capita da cidade
 
      //Calculando super poder
-     superpoder2 = (float)populacao2 + (float)area2 + (float)pib2 + (float)num_pts_tur2 + pib_per2 + (1/densidade_pop2);
-     printf("Super poder: %.2f", superpoder2);
+    // superpoder2 = (float)populacao2 + (float)area2 + (float)pib2 + (float)num_pts_tur2 + pib_per2 + (1/densidade_pop2);
+     //printf("Super poder: %.2f", superpoder2);
 
     printf("\nCartas cadastradas com sucesso!\n\n");
 
@@ -116,7 +116,7 @@ int main(){
     printf("\nDigite a opção desejada: ");
     scanf("  %d", &escolha);
 
-    printf("\n\n\n\n\n\n\nEscolha novamente um atributo para comparação\n");
+    printf("\n\nEscolha novamente um atributo para comparação\n");
     //IMPRIME AS OPÇÕES QUE NÃO FORAM SELECIONADAS
 
     if (escolha != 1)
